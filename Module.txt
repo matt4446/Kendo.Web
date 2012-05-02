@@ -1,0 +1,11 @@
+Name: Kendo.Web
+AntiForgery: enabled
+Author: The Orchard Team
+Website: http://orchardproject.net
+Version: 1.0
+OrchardVersion: 1.0
+Description: GPL V3 Module of Kendo UI Web
+Features:
+    Kendo.Web:
+		Name: Kendo UI
+        Description: GPL V3 GPL V3 Module of Kendo UI Web
