@@ -18,7 +18,7 @@ namespace Kendo.Web
             var version = "2012.1.327";
 
             manifest.DefineScript(mainScript)
-                .SetUrl("kendo.all.min.js")
+                .SetUrl("kendo.all.min.js", "kendo.all.js")
                 .SetDependencies("jQuery")
                 .SetVersion(version);
 
@@ -28,22 +28,27 @@ namespace Kendo.Web
 
             manifest.DefineStyle("kendo.web.default")
                 .SetUrl("kendo.default.min.css")
+                .SetDependencies("kendo.web.common")
                 .SetVersion(version);
 
             manifest.DefineStyle("kendo.web.black")
                 .SetUrl("kendo.black.min.css")
+                .SetDependencies("kendo.web.common")
                 .SetVersion(version);
 
             manifest.DefineStyle("kendo.web.blueopal")
                 .SetUrl("kendo.blueopal.min.css")
+                .SetDependencies("kendo.web.common")
                 .SetVersion(version);
 
             manifest.DefineStyle("kendo.web.metro")
                 .SetUrl("kendo.metro.min.css")
+                .SetDependencies("kendo.web.common")
                 .SetVersion(version);
 
             manifest.DefineStyle("kendo.web.silver")
                 .SetUrl("kendo.silver.min.css")
+                .SetDependencies("kendo.web.common")
                 .SetVersion(version);
         }
 
