@@ -59,6 +59,8 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Scripts\custom\dataSource.js" />
+    <Content Include="Scripts\custom\jquery-1.6.4-vsdoc.js" />
     <Content Include="Scripts\kendo.all.js" />
     <Content Include="Scripts\kendo.all.min.js" />
     <Content Include="Scripts\kendo.autocomplete.min.js" />

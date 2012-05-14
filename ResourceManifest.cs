@@ -22,6 +22,10 @@ namespace Kendo.Web
                 .SetDependencies("jQuery")
                 .SetVersion(version);
 
+            manifest.DefineScript("kendo.datasource")
+                .SetUrl("custom/datasource.js")
+                .SetDependencies(mainScript);
+
             manifest.DefineStyle("kendo.web.common")
                 .SetUrl("kendo.common.min.css")
                 .SetVersion(version);
