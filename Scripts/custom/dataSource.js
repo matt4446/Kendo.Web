@@ -1,4 +1,4 @@
-﻿/// <reference path="jquery-1.6.4-vsdoc.js" />
+/// <reference path="jquery-1.6.4-vsdoc.js" />
 /// <reference path="../kendo.all.js" />
 
 var Contrib = {
@@ -38,8 +38,7 @@ var Contrib = {
             }
         };
 
-        pub.init = function (model, routeSource, readNow) {
-            readNow || (readNow = false);
+        pub.init = function (model, routeSource) {
             jQuery.extend(pub.routes, routeSource);
 
             var transportType = function (url, type, data) {
@@ -66,9 +65,7 @@ var Contrib = {
                 pageSize: pub.settings.pageSize
             });
 
-            if(readNow){
-                pub.dataSource.read();
-            }
+            pub.dataSource.read();
         }
 
         return pub;
