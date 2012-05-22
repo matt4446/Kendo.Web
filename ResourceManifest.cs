@@ -18,9 +18,13 @@ namespace Kendo.Web
             var version = "2012.1.327";
 
             manifest.DefineScript(mainScript)
-                .SetUrl("kendo.all.min.js", "kendo.all.js")
+                .SetUrl("kendo.all.min.js")
                 .SetDependencies("jQuery")
                 .SetVersion(version);
+
+            manifest.DefineScript("kendo.datasource")
+                .SetUrl("custom/datasource.js")
+                .SetDependencies(mainScript);
 
             manifest.DefineStyle("kendo.web.common")
                 .SetUrl("kendo.common.min.css")
