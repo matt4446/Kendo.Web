@@ -65,7 +65,7 @@ var Contrib = {
                 pageSize: pub.settings.pageSize
             });
 
-            pub.dataSource.read();
+            //pub.dataSource.read();
         }
 
         return pub;
