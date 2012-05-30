@@ -8,6 +8,25 @@ using System.Web;
 
 namespace Kendo.Web.Models
 {
+    public class GridFilter
+    {
+        public virtual string Operator { get; set; }
+        public virtual string Field { get; set; }
+        public virtual string Value { get; set; }
+    }
+
+    public class GridFilters
+    {
+        public List<GridFilter> Filters { get; set; }
+        public string Logic { get; set; }
+    }
+
+    public class GridSort
+    {
+        public string Filed { get; set; }
+        public string Dir { get; set; }
+    }
+
     public class KendoGridRequestOrchardModel 
     {
         //public KendoGridRequest Model { get; set; }
@@ -37,7 +56,7 @@ namespace Kendo.Web.Models
             
             return new KendoGridRequestOrchardModel() 
             { 
-                 //FilterObjectWrapper = o.FilterObjectWrapper,
+                // FilterObjectWrapper = o.FilterObjectWrapper,
                  Logic = o.Logic,
                  Page = o.Page,
                  PageSize = o.PageSize,
