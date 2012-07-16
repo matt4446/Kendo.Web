@@ -7,7 +7,7 @@ var Contrib = {
             read: read,
             create: create,
             destroy: destroy,
-            update: update, 
+            update: update
         };
     },
     routeSource: function (routes, data) {

@@ -93,8 +93,8 @@ namespace Kendo.Web
 
             var mainScript = MainScript;
 
-            string currentVerison = "2012.2.621";
-            string[] versions = new [] { "2012.1.327" };
+            string currentVerison = "2012.2.710";
+            string[] versions = new[] { "2012.2.621, 2012.1.327" };
 
             this.DefineScripts(manifest, mainScript, currentVerison, versions);
             this.DefineStyles(manifest, mainScript, currentVerison, versions);
