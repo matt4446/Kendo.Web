@@ -1,0 +1,29 @@
+﻿@{ 
+    Script.Require("kendo.web").AtHead();
+    Style.Require("kendo.default").AtHead();
+    string idPostfix = @Html.FieldIdFor(m => m);
+}
+<fieldset>
+    <div class="k-content">
+        @Html.TextArea("Text", (string)Model.Text, 25, 80,
+     new Dictionary<string, object> {
+		{ "id", "wmd-input" + "-" + idPostfix },
+        { "class", "adminEditor" } 
+	 })
+    </div>
+
+</fieldset>
+@*
+<fieldset>
+    <label>@T("Preview")</label>
+    
+</fieldset>*@
+
+@using(Script.Foot())
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".adminEditor").kendoEditor({ encoded: false });
+        });
+    </script>
+}

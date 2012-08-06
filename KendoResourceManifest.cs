@@ -9,7 +9,7 @@ namespace Kendo.Web
 {
     public class KendoResourceManifest : IResourceManifestProvider
     {
-        public static string MainScript = "kendo.web";
+        public static string MainScript = "kendo";
         private string VersionPath(string version, string file) 
         {
             return string.Format("{0}/{1}", version, file);
@@ -21,10 +21,22 @@ namespace Kendo.Web
             
             foreach (var ver in versions)
             {
-                manifest.DefineScript(key).SetUrl(VersionPath(ver, "kendo.all.min.js") //, VersionPath(ver, "kendo.all.js")
-                   )
-                   .SetDependencies("jQuery")
-                   .SetVersion(ver);    
+                string webKey = string.Format("{0}.{1}", key, "web");
+                string dataViz = string.Format("{0}.{1}", key, "data");
+                string mobile = string.Format("{0}.{1}", key, "mobile");
+                string all = string.Format("{0}.{1}", key, "all");
+
+                manifest.DefineScript(webKey).SetUrl(VersionPath(ver, "kendo.web.min.js"))
+                    .SetDependencies("jQuery")
+                    .SetVersion(ver);
+
+                manifest.DefineScript(dataViz).SetUrl(VersionPath(ver, "kendo.web.min.js"))
+                    .SetDependencies("jQuery")
+                    .SetVersion(ver);
+
+                manifest.DefineScript(mobile).SetUrl(VersionPath(ver, "kendo.mobile.min.js"))
+                    .SetDependencies("jQuery")
+                    .SetVersion(ver);
             }
 
             manifest.DefineScript("kendo.datasource")

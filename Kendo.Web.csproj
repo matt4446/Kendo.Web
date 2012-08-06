@@ -1140,7 +1140,12 @@
   <ItemGroup>
     <Compile Include="Linq\DynamicQueryable.cs" />
     <Compile Include="ModelBinders\KendoGridRequestModelBinder.cs" />
+    <Compile Include="Models\GridFilter.cs" />
+    <Compile Include="Models\GridSort.cs" />
+    <Compile Include="Models\KendoGridModelBinderOrchard.cs" />
     <Compile Include="Models\KendoGridRequest.cs" />
+    <Compile Include="Models\KendoGridRequestOrchardModel.cs" />
+    <Compile Include="Models\KendoGridResult.cs" />
     <Compile Include="ResourceManifest.cs" />
   </ItemGroup>
   <ItemGroup>

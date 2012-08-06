@@ -9,3 +9,7 @@ Features:
     Kendo.Web:
 		Name: Kendo UI
         Description: GPL V3 GPL V3 Module of Kendo UI Web
+	Kendo.Admin.Editor:
+		Name: Kendo Editor 
+		Description: Kendo Editor as default
+		Dependencies: Kendo.Web
